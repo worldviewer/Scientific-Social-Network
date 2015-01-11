@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Impress Demo</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <style>
+        	#start {
+        		display: none;
+        	}
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="jquery-2.1.3.js"></script>
+        <script type="text/javascript" src="jmpress.custom.js"></script>
+
+        <div id="jmpress">
+            <div id="start" data-x="0" data-y="1290" class="step" data-scale="0.34">
+              <img src="annotations.jpg"></div>
+ 
+            <!-- The Elusive Big Idea -->
+            <div id="slide2" data-x="0" data-y="0" class="step" data-scale="1"></div>
+            <div id="slide3" data-x="-280" data-y="-100" class="step" data-scale="0.34"></div>
+            <div id="slide4" data-x="-20" data-y="-100" class="step" data-scale="0.34"></div>
+            <div id="slide5" data-x="350" data-y="-100" class="step" data-scale="0.34"></div>
+
+            <!-- Annotations -->
+            <div id="slide6" data-x="0" data-y="0" class="step" data-scale="1"></div>
+            <div id="slide7" data-x="-330" data-y="270" class="step" data-scale="0.34"></div>
+            <div id="slide8" data-x="-50" data-y="270" class="step" data-scale="0.34"></div>
+            <div id="slide9" data-x="272" data-y="270" class="step" data-scale="0.34"></div>
+
+            <!-- Annotations -->
+            <div id="slide10" data-x="0" data-y="500" class="step" data-scale="1"></div>
+            <div id="slide11" data-x="-270" data-y="750" class="step" data-scale="0.5"></div>
+            <div id="slide12" data-x="250" data-y="750" class="step" data-scale="0.5"></div>
+
+            <!-- Vee Diagram -->
+            <div id="slide13" data-x="0" data-y="1200" class="step" data-scale="1"></div>
+            <div id="slide14" data-x="-320" data-y="1200" class="step" data-scale="0.34"></div>
+            <div id="slide15" data-x="-30" data-y="1200" class="step" data-scale="0.34"></div>
+            <div id="slide16" data-x="250" data-y="1200" class="step" data-scale="0.34"></div>
+
+            <!-- Layers of Discourse -->
+            <div id="slide17" data-x="0" data-y="1800" class="step" data-scale="1"></div>
+            <div id="slide18" data-x="-280" data-y="1780" class="step" data-scale="0.5"></div>
+            <div id="slide19" data-x="270" data-y="1790" class="step" data-scale="0.5"></div>
+
+            <!-- Annotation Library -->
+            <div id="slide20" data-x="0" data-y="2200" class="step" data-scale="1"></div>
+            <div id="slide21" data-x="-270" data-y="2200" class="step" data-scale="0.5"></div>
+            <div id="slide22" data-x="270" data-y="2200" class="step" data-scale="0.5"></div>
+
+            <!-- Topic Modeling -->
+            <div id="slide23" data-x="0" data-y="2600" class="step" data-scale="1"></div>
+            <div id="slide24" data-x="-100" data-y="2700" class="step" data-scale="0.7"></div>
+            <div id="slide25" data-x="270" data-y="2800" class="step" data-scale="0.7"></div>
+            <div id="slide26" data-x="-268" data-y="3000" class="step" data-scale="0.34"></div>
+
+
+        </div>
+        <script type="text/javascript">
+        	$(function() {
+        		$('#jmpress').jmpress();
+        	});
+
+        	$('#start')
+        	  .on('leaveStep', function(event) {
+        	  	$('#start').css('display', 'block');
+        	  })
+        	  .on('enterStep', function(event) {
+        	  	$('#start').css('display', 'none');
+        	  });
+
+        </script>
+    </body>
+</html>
